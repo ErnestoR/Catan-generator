@@ -1,7 +1,7 @@
 .hexagon {
   position: relative;
   width: 150px;
-  height: 86.60px;
+  height: 86.60254px;
   background-color: #64C7CC;
   margin: 43.30px 0;
   border-left: solid 5px #333333;
@@ -14,11 +14,13 @@
   z-index: 1;
   width: 106.07px;
   height: 106.07px;
-  -webkit-transform: scaleY(0.5774) rotate(-45deg);
-  -ms-transform: scaleY(0.5774) rotate(-45deg);
-  transform: scaleY(0.5774) rotate(-45deg);
   background-color: inherit;
-  left: 16.9670px; }
+  left: 16.9670px;
+  -moz-transform: scaleY(0.5774) rotate(-45deg);
+  -o-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg); }
 
 .hexagon:before {
   top: -53.0330px;
