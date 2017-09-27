@@ -1,9 +1,14 @@
 #grid {
-  position: relative;
-  width: 60%;
-  margin: 0 auto;
-  padding: 0;
-  /* Clears unordered list default of 40px */ }
+  width: 80%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #grid > .row {
+    display: flex;
+    height: 135px; }
+    #grid > .row:nth-child(even) {
+      margin-left: -150px; }
 
 .clear:after {
   content: "";

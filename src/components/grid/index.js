@@ -4,11 +4,11 @@ import './style.css';
 import Hexagon from './../hexagon';
 
 const Grid = () => {
-  const horizontalSize = 1;
-  const verticalSize = 1;
+  const horizontalSize = 4;
+  const verticalSize = 4;
 
 
-  const renderHex = (evenOdd) => {
+  const renderColumns = (evenOdd) => {
     let result = [];
 
     for (let x = 1; x <= horizontalSize; x++) {
@@ -22,9 +22,11 @@ const Grid = () => {
     let result = [];
 
     for (let x = 1; x <= verticalSize; x++) {
-      result.push(
-        renderHex()
-      );
+      result.push((
+        <div className="row">
+          {renderColumns()}
+        </div>
+      ));
     }
 
     return result
