@@ -13,7 +13,7 @@ const Grid = () => {
 
     for (let x = 1; x <= cycles; x++) {
       hex.push(
-        <Hexagon/>
+        <Hexagon key={x}/>
       )
     }
 
@@ -26,7 +26,7 @@ const Grid = () => {
     for (let x = 1; x <= size * 2 - 1; x++) {
       row.push(
         (
-          <div className="row">
+          <div className="row" key={x}>
             {renderHex(x)}
           </div>
         )
