@@ -8,11 +8,7 @@
 
   > .row {
     display: flex;
-    height: 135px;
-
-    &:nth-child(even){
-      margin-left: -150px;
-    }
+    height: 132px;
   }
 }
 
