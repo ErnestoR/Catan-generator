@@ -4,38 +4,41 @@ import './style.css';
 import Hexagon from './../hexagon';
 
 const Grid = () => {
+  const size = 3;
+
+  const renderHex = index => {
+    const hex = [];
+    const cycles = 2 * size - 1 - Math.abs(size - index);
+
+
+    for (let x = 1; x <= cycles; x++) {
+      hex.push(
+        <Hexagon/>
+      )
+    }
+
+    return hex;
+  };
+
+  const renderRow = () => {
+    let row = [];
+
+    for (let x = 1; x <= size * 2 - 1; x++) {
+      row.push(
+        (
+          <div className="row">
+            {renderHex(x)}
+          </div>
+        )
+      )
+    }
+
+    return row;
+  };
 
   return (
     <div id="grid" className="clear">
-      <div className="row">
-        <Hexagon/>
-        <Hexagon/>
-        <Hexagon/>
-      </div>
-      <div className="row">
-        <Hexagon/>
-        <Hexagon/>
-        <Hexagon/>
-        <Hexagon/>
-      </div>
-      <div className="row">
-        <Hexagon/>
-        <Hexagon/>
-        <Hexagon/>
-        <Hexagon/>
-        <Hexagon/>
-      </div>
-      <div className="row">
-        <Hexagon/>
-        <Hexagon/>
-        <Hexagon/>
-        <Hexagon/>
-      </div>
-      <div className="row">
-        <Hexagon/>
-        <Hexagon/>
-        <Hexagon/>
-      </div>
+      {renderRow()}
     </div>
   )
 };
